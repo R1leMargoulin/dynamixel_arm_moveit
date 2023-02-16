@@ -1,0 +1,27 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: dynamixel_arm_description
+    relative_path: urdf/arm.urdf
+  srdf:
+    relative_path: config/dyamixel_arm.srdf
+  package_settings:
+    author_name: Erwan MARTIN
+    author_email: emartin@cesi.fr
+    generated_timestamp: 1674641569
+  control_xacro:
+    command:
+      - position
+      - velocity
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+      - velocity
+    state:
+      - position
+      - velocity
