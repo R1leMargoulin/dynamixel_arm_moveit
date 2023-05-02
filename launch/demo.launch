@@ -34,9 +34,9 @@
     </node> aaaaaaaaaaaaaaaaaaaaaaaaa-->
     <!-- If desired, a GUI version is available allowing to move the simulated robot around manually
          This corresponds to moving around the real robot without the use of MoveIt. -->
-    <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(arg use_gui)">
+    <!-- <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(arg use_gui)">
       <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam>
-    </node>
+    </node> aaaaaaaaaaaaaaaaaaaaaaaaaa-->
 
     <!-- Given the published joint states, publish tf for the robot links -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
@@ -45,8 +45,8 @@
   <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
   <include file="$(dirname)/move_group.launch">
     <arg name="allow_trajectory_execution" value="true"/>
-    <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)" />
-    <arg name="fake_execution_type" value="$(arg fake_execution_type)"/>
+    <!-- <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)" /> -->
+    <!-- <arg name="fake_execution_type" value="$(arg fake_execution_type)"/> -->
     <arg name="info" value="true"/>
     <arg name="debug" value="$(arg debug)"/>
     <arg name="pipeline" value="$(arg pipeline)"/>
