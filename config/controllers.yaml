@@ -1,5 +1,5 @@
-controller_list:
- - name: dynamixel_arm/joint_trajectory_controller
-   action_ns: "follow_joint_trajectory"
-   type: FollowJointTrajectory
-   joints: [joint1,joint2,joint3,joint4,gripper]
+ controller_list:
+  - name: arm_moveit
+    action_ns: "joint_trajectory_follow"
+    type: FollowJointTrajectory
+    joints: [joint1,joint2,joint3,joint4,gripper]

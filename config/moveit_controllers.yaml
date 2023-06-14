@@ -5,23 +5,39 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 moveit_simple_controller_manager:
   controller_names:
     - arm_moveit
-    - gripper_moveit
+#    - gripper_moveit
 
   arm_moveit:
     type: FollowJointTrajectory
-    action_ns: follow_joint_trajectory
+    action_ns: joint_trajectory_follow
     default: true
     joints:
       - joint1
       - joint2
       - joint3
       - joint4
-    action_ns: follow_joint_trajectory
+    action_ns: joint_trajectory_follow
     default: true
-  gripper_moveit:
-    type: GripperCommand
-    joints:
-      - joint4
-      - gripper
-    action_ns: gripper_cmd
-    default: true
+  # gripper_moveit:
+  #   type: GripperCommand
+  #   joints:
+  #     - joint4
+  #     - gripper
+  #   action_ns: gripper_cmd
+  #   default: true
+
+
+
+  # moveit_controller_manager:
+  # name: moveit_simple_controller_manager.MoveItSimpleControllerManager
+  # action_ns: joint_trajectory_follow
+  # # List of controllers to load
+  # controllers:
+  #   - name: arm_moveit
+  #     action_ns: joint_trajectory_follow
+  #     type: FollowJointTrajectory
+  #     joints:
+  #     - joint1
+  #     - joint2
+  #     - joint3
+  #     - joint4
